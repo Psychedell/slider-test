@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  $('.slider').slick();
+  $('.slider').slick({
+    slidesToShow: 2,
+  });
 });
 
 // $('.slider').slick({
