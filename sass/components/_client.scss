@@ -1,0 +1,54 @@
+.client-section__title {
+  @extend %title;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+
+  @include for-pc-up {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
+.client-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.client {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 2 - 30px);
+
+  @include for-tablet-up {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  @include for-pc-up {
+    flex-basis: calc(100% / 6 - 30px);
+  }
+}
+
+.client__button {
+  @extend %centeredFlex;
+  border: 1px solid $icon-bg-color;
+  border-radius: 4px;
+  height: 92px;
+  color: $icon-bg-color;
+  transition: color $transition-duration $overlay-cubic, border $transition-duration $overlay-cubic;
+
+  &:hover,
+  &:focus {
+    color: $focus-button-bg-color;
+    border: 1px solid $focus-button-bg-color;
+  }
+}
+
+.client__icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

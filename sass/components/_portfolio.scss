@@ -1,0 +1,150 @@
+.section-portfolio__title {
+  @extend %title;
+}
+
+.photo-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  margin-left: -8px;
+  margin-bottom: -15px;
+
+  @include for-tablet-up {
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+
+  @include for-pc-up {
+    padding-bottom: 50px;
+  }
+}
+
+.photo-nav__item {
+  margin-left: 8px;
+  margin-bottom: 15px;
+
+  @include for-tablet-up {
+    margin-bottom: 0;
+  }
+}
+
+.photo-nav__button {
+  @extend %button;
+  color: $titile-text-color;
+  background-color: $button-bg-color;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 6px 22px;
+  transition: color $transition-duration $overlay-cubic,
+    background-color $transition-duration $overlay-cubic,
+    box-shadow $transition-duration $overlay-cubic;
+
+  &:hover,
+  &:focus {
+    color: $white-text-color;
+    background-color: $focus-button-bg-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &--primary {
+    color: $white-text-color;
+    background-color: $focus-button-bg-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.photo-cards {
+  margin-bottom: -30px;
+
+  @include for-tablet-up {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: none;
+  transition: box-shadow $transition-duration $overlay-cubic;
+
+  @include for-tablet-up {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+
+  @include for-pc-up {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .card__overlay,
+  &:focus .card__overlay {
+    transform: translateY(0);
+  }
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.556;
+  color: $white-text-color;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform $transition-duration $overlay-cubic;
+}
+
+.card__text {
+  flex-grow: 1;
+  border: 1px solid #eeeeee;
+  border-top: transparent;
+  padding: 20px 24px;
+  box-shadow: none;
+}
+
+.card__project {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  color: $titile-text-color;
+}
+
+.card__career {
+  font-size: 16px;
+  line-height: 1.88;
+  color: $primary-text-color;
+}

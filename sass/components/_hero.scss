@@ -1,0 +1,86 @@
+.hero {
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #2f303a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   object-fit: contain;
+
+  @include for-pc-up {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/mob-bg-hero.jpg);
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/tab-bg-hero.jpg);
+  }
+
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/pc-bg-hero.jpg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/mob-bg-hero@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/tab-bg-hero@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/pc-bg-hero@2x.jpg);
+    }
+  }
+}
+
+.hero__title {
+  color: $white-text-color;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  @include for-pc-up {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__button {
+  color: $white-text-color;
+  background-color: $focus-button-bg-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border: transparent;
+  transition: background-color $transition-duration $overlay-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $focus-button-bg-color-order;
+  }
+}

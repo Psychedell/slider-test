@@ -1,0 +1,217 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $transition-duration $overlay-cubic,
+    visibility $transition-duration $overlay-cubic;
+  overflow-y: scroll;
+  padding: 93px 15px;
+
+  @include for-pc-up {
+    padding: 0;
+  }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.8);
+  @include for-pc-up {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.modal {
+  position: relative;
+  transition: transform $transition-duration $overlay-cubic;
+  margin: 0 auto;
+  max-width: 450px;
+  width: 100%;
+  background-color: $primary-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: scale(1);
+
+  @include for-pc-up {
+    max-width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  @extend %centeredFlex;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-bg-color;
+  border-radius: 50%;
+  fill: $black-logo-color;
+  transition: fill $transition-duration $overlay-cubic;
+  cursor: pointer;
+
+  &:hover {
+    fill: $focus-button-bg-color;
+  }
+}
+
+/* modal form */
+.form {
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $titile-text-color;
+  padding-bottom: 12px;
+
+  @include for-pc-up {
+    line-height: 1.15;
+  }
+}
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.contact-form__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.contact-form__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  padding-left: 42px;
+  padding-right: 16px;
+  color: $titile-text-color;
+  resize: none;
+  cursor: pointer;
+  transition: border $transition-duration $overlay-cubic;
+
+  &--height {
+    height: 40px;
+  }
+
+  &--comment {
+    padding: 12px 16px;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+
+    @include for-pc-up {
+      line-height: 1.167;
+    }
+  }
+
+  &:focus {
+    border: 1px solid $focus-button-bg-color;
+  }
+}
+
+.contact-form__input:focus + .contact-form__icon {
+  fill: $focus-button-bg-color;
+}
+
+.contact-form__icon {
+  position: absolute;
+  bottom: 21px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: $titile-text-color;
+  transition: fill $transition-duration $overlay-cubic;
+}
+
+.contact-form-policy {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0;
+
+  @include for-pc-up {
+    padding-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+.contact-form-policy__label {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  @extend %centeredFlex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 320px) and (max-width: 362px) {
+    font-size: 9px;
+  }
+
+  @include for-pc-up {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+
+  &--rules {
+    color: $accent-text-color;
+    margin-left: 5px;
+  }
+}
+
+.contact-form-policy__checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $titile-text-color;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.contact-form-policy__input:checked + .contact-form-policy__checkbox {
+  border-color: $focus-button-bg-color;
+  background-color: $focus-button-bg-color;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.button__send {
+  @extend %button;
+  @extend %centeredFlex;
+  min-width: 200px;
+}

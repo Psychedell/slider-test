@@ -1,0 +1,44 @@
+.section-doing {
+  padding-top: 0;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.section-doing__title {
+  @extend %title;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 50px;
+
+  @include for-pc-up {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
+.doing-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.doing-list__item {
+  position: relative;
+}
+
+.doing-list__element {
+  @extend %centeredFlex;
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  color: $white-text-color;
+}

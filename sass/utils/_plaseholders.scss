@@ -1,0 +1,44 @@
+%centeredFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%button {
+  color: $white-text-color;
+  background-color: $focus-button-bg-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border: transparent;
+  transition: background-color $transition-duration $overlay-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $focus-button-bg-color-order;
+  }
+}
+
+%title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  // margin-top: 0;
+  // margin-bottom: 50px;
+  color: $titile-text-color;
+}
+
+%container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
