@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
@@ -18,591 +19,112 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!--header page-->
-    <header class="page-header">
-      <div class="container container-header">
-        <a href="./index.html" class="logo"><span class="logo__web">Web</span>Studio</a>
-        <button class="mob-menu__button-open" type="button">
-          <svg
-            class="mobile-btn__focus"
-            width="40"
-            height="40"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use href="./images/icons.svg#mobile-burger"></use>
-          </svg>
-        </button>
 
-        <div class="navigation">
-          <nav>
-            <ul class="site-nav">
-              <li class="site-nav__item">
-                <a href="./index.html" class="site-nav__link">Студия</a>
-              </li>
-              <li class="site-nav__item">
-                <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-            </ul>
-          </nav>
-          <ul class="auth-nav">
-            <li class="auth-nav__item auth-nav__item--mb">
-              <a href="mailto:info@devstudio.com" class="auth-nav__link">
-                <svg class="auth-nav__icon--envelope">
-                  <use href="./images/icons.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="auth-nav__item">
-              <a href="tel:+380961111111" class="auth-nav__link">
-                <svg class="auth-nav__icon--smartphone">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+   
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/basketball.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/book.jpg" alt=""></div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
 
-      <!-- mob menu -->
-      <div class="mob-menu is-hidden">
-        <div class="container">
-          <button class="mob-menu__button-close" type="button">
-            <svg
-              class="mobile-btn__focus"
-              width="40"
-              height="40"
-              aria-label="Закрыть мобильное меню"
-            >
-              <use href="./images/icons.svg#mobile-close"></use>
-            </svg>
-          </button>
-          <ul class="mob-site-nav__list">
-            <li class="mob-site-nav__item">
-              <a href="./index.html" class="mob-site-nav__link">Студия</a>
-            </li>
-            <li class="mob-site-nav__item">
-              <a href="./portfolio.html" class="mob-site-nav__link mob-site-nav__link--current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="mob-site-nav__item">
-              <a href="" class="mob-site-nav__link">Контакты</a>
-            </li>
-          </ul>
-          <div class="mob-menu-bottom">
-            <ul class="mob-auth-nav__list">
-              <li class="mob-auth-nav__item">
-                <a href="tel:+380961111111" class="mob-auth-nav__link mob-auth-nav__link--size"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-              <li class="mob-auth-nav__item">
-                <a href=".mailto:info@devstudio.com" class="mob-auth-nav__link"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-
-            <ul class="mob-soc__list">
-              <li class="mob-soc__item">
-                <a href="https://www.instagram.com" class="mob-soc__link">Instagram</a>
-              </li>
-              <li class="mob-soc__item">
-                <a href="https://twitter.com" class="mob-soc__link">Twitter</a>
-              </li>
-              <li class="mob-soc__item">
-                <a href="https://www.facebook.com" class="mob-soc__link">Facebook</a>
-              </li>
-              <li class="mob-soc__item">
-                <a href="https://www.linkedin.com" class="mob-soc__link">LinkedIn</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!--main portfolio-->
-    <main>
-      <section class="section section-portfolio">
-        <div class="container">
-          <h1 class="section-portfolio__title visually-hidden">РАБОТЫ</h1>
-          <ul class="photo-nav">
-            <li class="photo-nav__item">
-              <button type="button" class="photo-nav__button photo-nav__button--primary">
-                Все
-              </button>
-            </li>
-            <li class="photo-nav__item">
-              <button type="button" class="photo-nav__button">Веб-сайты</button>
-            </li>
-            <li class="photo-nav__item">
-              <button type="button" class="photo-nav__button">Приложения</button>
-            </li>
-            <li class="photo-nav__item">
-              <button type="button" class="photo-nav__button">Дизайн</button>
-            </li>
-            <li class="photo-nav__item">
-              <button type="button" class="photo-nav__button">Маркетинг</button>
-            </li>
-          </ul>
-
-          <h2 class="section-portfolio__title visually-hidden">Фото работ</h2>
-          <ul class="photo-cards">
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_laptop1.jpg 1x, ./images/pc740_laptop1@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_laptop1.jpg 1x, ./images/tab708_laptop1@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_laptop1.jpg 1x, ./images/mob900_laptop1@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_laptop1.jpg" alt="laptop" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Технокряк</h2>
-                  <p class="card__career">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_basketball.jpg 1x, ./images/pc740_basketball@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="
-                        ./images/tab354_basketball.jpg    1x,
-                        ./images/tab708_basketball@2x.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./images/mob450_basketball.jpg    1x,
-                        ./images/mob900_basketball@2x.jpg 2x
-                      "
-                    />
-                    <img src="./images/mob450_basketball.jpg" alt="basketball" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Постер New Orlean vs Golden Star</h2>
-                  <p class="card__career">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_seafood.jpg 1x, ./images/pc740_seafood@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_seafood.jpg 1x, ./images/tab708_seafood@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_seafood.jpg 1x, ./images/mob900_seafood@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_seafood.jpg" alt="seafood" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Ресторан Seafood</h2>
-                  <p class="card__career">Приложение</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_headphones.jpg 1x, ./images/pc740_headphones@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="
-                        ./images/tab354_headphones.jpg    1x,
-                        ./images/tab708_headphones@2x.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./images/mob450_headphones.jpg    1x,
-                        ./images/mob900_headphones@2x.jpg 2x
-                      "
-                    />
-                    <img src="./images/mob450_headphones.jpg" alt="headphones" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Проект Prime</h2>
-                  <p class="card__career">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_boxes.jpg 1x, ./images/pc740_boxes@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_boxes.jpg 1x, ./images/tab708_boxes@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_boxes.jpg 1x, ./images/mob900_boxes@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_boxes.jpg" alt="boxes" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Проект Boxes</h2>
-                  <p class="card__career">Приложение</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_macbook.jpg 1x, ./images/pc740_macbook@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_macbook.jpg 1x, ./images/tab708_macbook@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_macbook.jpg 1x, ./images/mob900_macbook@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_macbook.jpg" alt="macbook" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Inspiration has no Borders</h2>
-                  <p class="card__career">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_book.jpg 1x, ./images/pc740_book@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_book.jpg 1x, ./images/tab708_book@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_book.jpg 1x, ./images/mob900_book@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_book.jpg" alt="book" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Издание Limited Edition</h2>
-                  <p class="card__career">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="./images/pc370_labeltag.jpg 1x, ./images/pc740_labeltag@2x.jpg 2x"
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="./images/tab354_labeltag.jpg 1x, ./images/tab708_labeltag@2x.jpg 2x"
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="./images/mob450_labeltag.jpg 1x, ./images/mob900_labeltag@2x.jpg 2x"
-                    />
-                    <img src="./images/mob450_labeltag.jpg" alt="labeltag" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Проект LAB</h2>
-                  <p class="card__career">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="card">
-              <a href="" class="card__link">
-                <div class="card__img">
-                  <picture>
-                    <source
-                      media="(min-width: 1200px)"
-                      srcset="
-                        ./images/pc370_laptop-hands.jpg    1x,
-                        ./images/pc740_laptop-hands@2x.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(min-width: 768px)"
-                      srcset="
-                        ./images/tab354_laptop-hands.jpg    1x,
-                        ./images/tab708_laptop-hands@2x.jpg 2x
-                      "
-                    />
-                    <source
-                      media="(max-width: 767px)"
-                      srcset="
-                        ./images/mob450_laptop-hands.jpg    1x,
-                        ./images/mob900_laptop-hands@2x.jpg 2x
-                      "
-                    />
-                    <img src="./images/mob450_laptop-hands.jpg" alt="laptop-hands" />
-                  </picture>
-                  <div class="card__overlay">
-                    <p>
-                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
-                      компании или частном лице.
-                    </p>
-                  </div>
-                </div>
-                <div class="card__text">
-                  <h2 class="card__project">Growing Business</h2>
-                  <p class="card__career">Приложение</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <!-- <div class="container slider"></div>
-     <article class="slider-item container">
-        <img class="slider-item__img" src="./images/elisabeth.png" alt="Will" width="280"/>
-        <p class="slider-item__text">
-          Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Которой переписали о переписывается ручеек строчка города собрал, взобравшись за предупреждал, текст решила до если над путь рукописи запятой что.
+    <div class="slider-top">
+      <article class="slider-top-item">
+        <img class="slider-top-item__img" src="./images/elisabeth.png" alt="" />
+        <p class="slider-top-item__text">
+          
+        </p>
+        <!-- <p class="slider-item__number">2/15</p> -->
+      </article>
+      <article class="slider-top-item">
+        <img class="slider-top-item__img" src="./images/boy.png" alt="" />
+        <p class="slider-top-item__text">
+          
+        </p>
+        <!-- <p class="slider-item__number">3/15</p> -->
+      </article>
+      <article class="slider-top-item">
+        <img class="slider-top-item__img" src="./images/girl.png" alt="" />
+        <p class="slider-top-item__text">
+          
         </p>
       </article>
-      <article class="slider-item container">
-        <img class="slider-item__img" src="./images/elisabeth.png" alt="Will" width="280"/>
-        <p class="slider-item__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repudiandae, assumenda ad voluptate harum pariatur dignissimos eligendi iste aperiam similique neque quia ipsam cupiditate sit culpa nobis sint ullam corporis.
+      <article class="slider-top-item">
+        <img class="slider-top-item__img" src="./images/girl.png" alt="" />
+        <p class="slider-top-item__text">
+          
         </p>
       </article>
-      <article class="slider-item container">
-        <img class="slider-item__img" src="./images/elisabeth.png" alt="Will" width="280"/>
-        <p class="slider-item__text">
-          Last time I have visited a cooking course by Eva I was impressed with the way she
-          explained everything to people. You can be sure you will manage to cook a delicious dish
-          even if it is your first time in the kitchen! Thank you so much for the masterclass!
-          Looking forward to the next one and highly recommend it to everyone!
+      <article class="slider-top-item">
+        <img class="slider-top-item__img" src="./images/girl.png" alt="" />
+        <p class="slider-top-item__text">
+          
         </p>
       </article>
-    </div> -->
+    </div>
+
+
 
     <div class="slider">
       <article class="slider-item">
-        <img class="slider-item__img" src="./images/elisabeth.png" alt="" width="280" />
+        <img class="slider-item__img" src="./images/elisabeth.png" alt="" />
         <p class="slider-item__text">
-          Last time I have visited a cooking course by Eva I was impressed with the way she
-          explained everything to people. You can be sure you will manage to cook a delicious dish
-          even if it is your first time in the kitchen! Thank you so much for the masterclass!
-          Looking forward to the next one and highly recommend it to everyone!
+          Далеко-далеко за словесными горами в стране.
         </p>
-        <p class="slider-item__number">2/15</p>
+        <!-- <p class="slider-item__number">2/15</p> -->
       </article>
       <article class="slider-item">
         <img class="slider-item__img" src="./images/boy.png" alt="" width="280" />
         <p class="slider-item__text">
-          Last time I have visited a cooking course by Eva I was impressed with the way she
-          explained everything to people. You can be sure you will manage to cook a delicious dish
-          even if it is your first time in the kitchen! Thank you so much for the masterclass!
-          Looking forward to the next one and highly recommend it to everyone!
+          Далеко-далеко за словесными горами в стране.
         </p>
-        <p class="slider-item__number">3/15</p>
+        <!-- <p class="slider-item__number">3/15</p> -->
       </article>
       <article class="slider-item">
         <img class="slider-item__img" src="./images/girl.png" alt="" width="280" />
         <p class="slider-item__text">
-          Last time I have visited a cooking course by Eva I was impressed with the way she
-          explained everything to people. You can be sure you will manage to cook a delicious dish
-          even if it is your first time in the kitchen! Thank you so much for the masterclass!
-          Looking forward to the next one and highly recommend it to everyone!
+          Далеко-далеко за словесными горами в стране.
         </p>
-        <p class="slider-item__number">1/15</p>
+      </article>
+      <article class="slider-item">
+        <img class="slider-item__img" src="./images/girl.png" alt="" width="280" />
+        <p class="slider-item__text">
+          Далеко-далеко за словесными горами в стране.
+        </p>
+      </article>
+      <article class="slider-item">
+        <img class="slider-item__img" src="./images/girl.png" alt="" width="280" />
+        <p class="slider-item__text">
+          Далеко-далеко за словесными горами в стране.
+        </p>
       </article>
     </div>
 
-    <!--footer page-->
-    <footer>
-      <div class="footer">
-        <div class="container footer-container">
-          <div class="footer__contact">
-            <a href="" class="footer-logo"
-              ><span class="footer-logo--blue">Web</span
-              ><span class="footer-logo--white">Studio</span></a
-            >
-            <address>
-              <a href="https://goo.gl/maps/uPLYLn5CrwRYCuye6" class="footer__address"
-                >г. Киев, пр-т Леси Украинки, 26</a
-              >
-              <a href="mailto:info@example.com" class="footer__mail">info@example.com</a>
-              <a href="tel:+380991111111" class="footer__phone">+38 099 111 11 11</a>
-            </address>
-          </div>
+    
 
-          <div class="footer-social">
-            <p class="footer-social__slogan">присоединяйтесь</p>
-            <ul class="footer-social__list">
-              <li class="footer-social__item">
-                <a href="https://www.instagram.com" class="footer-social__link" target="_blank">
-                  <svg class="footer-social__icon">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social__item">
-                <a href="https://twitter.com" class="footer-social__link" target="_blank">
-                  <svg class="footer-social__icon">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social__item">
-                <a href="https://www.facebook.com" class="footer-social__link" target="_blank">
-                  <svg class="footer-social__icon">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-social__item">
-                <a href="https://www.linkedin.com" class="footer-social__link" target="_blank">
-                  <svg class="footer-social__icon">
-                    <use href="./images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- subscribe-form -->
-        <form class="subscribe-form" autocomplete="off">
-          <p class="subscribe-form__slogan">Подпишитесь на рассылку</p>
-          <div class="subscribe-form__flex-mix">
-            <label for="email"></label>
-            <input
-              class="subscribe-form__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-            />
-
-            <div class="subscribe-form__button">
-              <button class="subscribe-form__button--text" type="submit">
-                Подписаться
-                <svg class="subscribe-form__button--icon">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </footer>
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/script.js"></script>
