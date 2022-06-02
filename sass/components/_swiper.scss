@@ -1,27 +1,64 @@
+
 .swiper {
-    width: 400px;
-    height: 300px;
-    // margin: 0 auto;
     position: relative;
+    margin-top: 100px;
+    width: 280px;
+    height: 614px;
 
+    @media screen and (min-width: 768px) {
+        width: 704px;
+        height: 658px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 1031px;
+        height: 757px;
+    }
+
+   
 }
 
-.swiper-slide {
-
+.swiper-slide-active {
+    margin-top: 200px;
+    // width: 354px;
 }
 
+.swiper-button-prev:after {
+    display: none;
+}
 
-// .swiper-button-prev {
-// position: absolute;
-// color: #000;
-// bottom: -150px;
-// right: 0;
+.swiper-button-next:after {
+    display: none;
+}
+
+// .swiper-wrapper {
+//     position: relative;
 // }
+
+.swiper-button-prev {
+    position: absolute;
+    top: 100.5%;
+    left: 42%;
+    background: url('../images/next.png');
+    width: 35px;
+    height: 1px;
+    z-index: 20;
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 100.5%;
+    right: 42%;
+    background: url('../images/next.png');
+    width: 35px;
+    height: 1px;
+    z-index: 20;
+}
 
 
 .swiper-slide {
     text-align: center;
-    // font-size: 18px;
+    font-size: 18px;
     background: #fff;
 
     /* Center slide text vertically */
@@ -41,7 +78,57 @@
 
 .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 152px;
     height: 100%;
     object-fit: cover;
+    margin: 0 auto;
+}
+
+.swiper-slide-active img {
+    width: 500px;
+}
+
+.swiper-slide__text {
+    display: none;
+    // width: 704px;
+    // justify-content: center;
+    // text-align: center;
+    // margin-left: -100px;
+}
+
+// .swiper-button-next:after {
+//     content: '';
+//     background: url('../images/next.png');
+//     width: 35px;
+//     height: 1px;
+//     position: absolute;
+//     top: 380px;
+//     right: 311px;
+// }
+
+// .swiper-button-prev:after {
+//     content: '';
+//     background: url('../images/next.png');
+//         width: 35px;
+//         height: 1px;
+//         position: absolute;
+//         top: 380px;
+//         left: 311px;
+// }
+
+.swiper-slide-active .swiper-slide__text {
+    display: block;
+    width: 280px;
+}
+// 
+.swiper-slide-active .img {
+    width: 600px;
+}
+
+.swiper-pagination {
+    font-family: 'Montserrat';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.21;
+        color: #AB816C;
 }
